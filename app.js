@@ -21,8 +21,8 @@ app.post('/', (req, res) => {
     const {num,Lower_limit,Upper_limit} = req.body;
 
     var program = {
-        "clientId": "3a3bb2ae4f0c5146bd2d0e50729c17c4",
-        "clientSecret": "1df9581d451b6aca5f5b12799a554a1816ccf5a8b99709de2206596c231593b8",
+        "clientId": "2e0058b7e2a5c294e948393f3f083c75",
+        "clientSecret": "231464632174419867bfc50fe25990272b216ea102b5233a6cb3b893dab1ad98",
         "stdin":  num + ' ' + Lower_limit + ' ' + Upper_limit,
         "script" : "#include <bits/stdc++.h>\r\n\r\nusing namespace std;\r\nconst long long INF = 1e18;\r\n\r\n#define fastio()                  \\\r\n    ios_base::sync_with_stdio(0); \\\r\n    cin.tie(0);                   \\\r\n    cout.tie(0)\r\n#define endl \"\\n\"\r\n\r\nint main() {\r\n// #ifndef ONLINE_JUDGE    \r\n// freopen(\"input.txt\",\"r\",stdin);\r\n// freopen(\"output.txt\",\"w\",stdout);\r\n// #endif\r\n\r\nfastio();\r\n\r\n    long long n,l,r;\r\n    cin>>n>>l>>r;\r\n    std::random_device rd;     // only used once to initialise (seed) engine\r\n    std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)\r\n    uniform_int_distribution <long long> uni(l,r);\r\n\r\n    vector <long long> ans;\r\n     for(int i = 0; i < n; i++) {\r\n        auto num = uni(rng);\r\n        ans.push_back(num);\r\n    }\r\n\r\n    sort(ans.begin(), ans.end());\r\n    //cout<<n<<endl;\r\n    for(int i = 0; i < n; i++)\r\n    cout<<ans[i]<<endl;\r\n\r\n}",
         "language" : "cpp17",
