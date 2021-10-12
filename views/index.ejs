@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="d-flex flex-column justify-content-center align-items-center container">
+                <li>Hi Guys! This is a basic random integer generator</li>
+                <li>Input the number of elements you want upto 3490</li>
+                <li>Total number of such calls that can be made is limited to 200</li>
+                <br>
+                <div class = "row">
+                    <form action="/" method="POST">
+                        <div class="mb-2"> 
+                            <label for = "num"> Enter input size </label>
+                            <input type="text" class="form-control" name = "num" id= "num" required>
+                        </div>
+                        <div class="mb-2"> 
+                            <label for = "Lower limit"> Lower Limit </label>
+                            <input type="text" class="form-control" name = "Lower_limit" id= "Lower_limit" required>
+                        </div>
+                        <div class="mb-3"> 
+                            <label for = "Upper limit"> Upper Limit </label>
+                            <input type="text" class="form-control" name = "Upper_limit" id= "Upper_limit" required>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"> 
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="row w-25"> 
+                    <textarea id="Generated Data"name="Generated Data"rows="10"cols="20"><% if (body) { %><% let temp = "" %><% for(let val of body.output){ %><%=val%><% } %><% } %></textarea> 
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    </body>
+</html>
