@@ -17,6 +17,9 @@ Open your favourite Code Editor and write the following code to clone it
 
 After cloning , type
 
+```cd TestCaseGgen```
+
+followed by 
 
 ```npm i```
 
