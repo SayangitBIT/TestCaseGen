@@ -33,4 +33,4 @@ To launch the application enter,
 ```node app.js ```
   
   
-Now,open google chrome and enter ```localhost:3000``` to navigate the site.
+Now,open google chrome / your preferred Web Browser and enter ```localhost:3000``` to navigate the site.
